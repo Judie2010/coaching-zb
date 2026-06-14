@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>教练行业周报 W2624 — 2026.06.08–06.14</title>
+<style>
+:root {
+  --bg: #f8f9fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #6c757d;
+  --accent: #2d6a4f;
+  --accent-light: #d8f3dc;
+  --border: #e9ecef;
+  --tag-bg: #f0f4f8;
+  --tag-text: #495057;
+  --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-hover: 0 4px 12px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04);
+  --radius: 12px;
+  --radius-sm: 8px;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  --hero-gradient: linear-gradient(135deg, #1b4332 0%, #2d6a4f 40%, #40916c 100%);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+/* Hero */
+.hero { background: var(--hero-gradient); color: #fff; padding: 48px 0 40px; position: relative; overflow: hidden; }
+.hero::after { content: ''; position: absolute; top: -50%; right: -20%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, transparent 70%); border-radius: 50%; }
+.hero-inner { position: relative; z-index: 1; }
+.hero-badge { display: inline-block; background: rgba(255,255,255,0.15); backdrop-filter: blur(4px); border-radius: 20px; padding: 4px 14px; font-size: 13px; font-weight: 600; letter-spacing: 1px; margin-bottom: 12px; }
+.hero-date { font-size: 14px; opacity: 0.8; letter-spacing: 2px; margin-bottom: 8px; }
+.hero h1 { font-size: 36px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 4px; }
+.hero-subtitle { font-size: 15px; opacity: 0.75; margin-bottom: 24px; }
+.hero-stats { display: flex; gap: 32px; flex-wrap: wrap; }
+.hero-stat { text-align: center; }
+.hero-stat-num { font-size: 42px; font-weight: 800; line-height: 1; }
+.hero-stat-label { font-size: 12px; opacity: 0.7; margin-top: 4px; letter-spacing: 1px; }
+.hero-sections { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 20px; }
+.hero-section-chip { background: rgba(255,255,255,0.12); backdrop-filter: blur(4px); border-radius: 20px; padding: 4px 12px; font-size: 12px; display: flex; align-items: center; gap: 6px; }
+.hero-section-chip .chip-count { background: rgba(255,255,255,0.25); border-radius: 10px; padding: 0 7px; font-size: 11px; font-weight: 600; }
+
+/* Nav */
+.nav-wrap { position: sticky; top: 0; z-index: 100; background: var(--card-bg); border-bottom: 1px solid var(--border); box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+.nav { display: flex; gap: 4px; overflow-x: auto; padding: 10px 0; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.nav::-webkit-scrollbar { display: none; }
+.nav a { flex-shrink: 0; text-decoration: none; color: var(--text-secondary); font-size: 13px; padding: 6px 16px; border-radius: 20px; transition: all 0.2s; white-space: nowrap; }
+.nav a:hover, .nav a.active { background: var(--accent-light); color: var(--accent); font-weight: 600; }
+
+/* Sections */
+main { padding: 40px 0 60px; }
+.section { margin-bottom: 48px; scroll-margin-top: 60px; }
+.section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid var(--accent-light); }
+.section-icon { width: 36px; height: 36px; border-radius: 10px; background: var(--accent-light); display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.section-title { font-size: 20px; font-weight: 700; color: var(--accent); }
+.section-count { font-size: 13px; color: var(--text-secondary); margin-left: auto; }
+
+/* Cards Grid */
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px; }
+
+/* Card */
+.card { background: var(--card-bg); border-radius: var(--radius); padding: 20px 22px; box-shadow: var(--shadow); border: 1px solid var(--border); transition: box-shadow 0.25s, transform 0.25s; display: flex; flex-direction: column; gap: 10px; opacity: 0; transform: translateY(20px); }
+.card.visible { opacity: 1; transform: translateY(0); }
+.card:hover { box-shadow: var(--shadow-hover); transform: translateY(-2px); }
+.card-header { display: flex; align-items: flex-start; gap: 10px; }
+.card-num { flex-shrink: 0; width: 28px; height: 28px; border-radius: 8px; background: var(--accent-light); color: var(--accent); font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.card-title { font-size: 15px; font-weight: 600; color: var(--text); line-height: 1.5; flex: 1; }
+.card-meta { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.source-chip { display: inline-flex; align-items: center; gap: 4px; background: var(--tag-bg); color: var(--tag-text); font-size: 11px; padding: 2px 10px; border-radius: 12px; font-weight: 500; }
+.time-chip { font-size: 11px; color: var(--text-secondary); }
+.card-summary { font-size: 13px; color: var(--text-secondary); line-height: 1.7; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.card-action { display: flex; justify-content: flex-end; margin-top: 2px; }
+.btn-link { display: inline-flex; align-items: center; gap: 4px; text-decoration: none; font-size: 12px; font-weight: 600; color: var(--accent); padding: 5px 14px; border: 1px solid var(--accent-light); border-radius: 20px; transition: all 0.2s; }
+.btn-link:hover { background: var(--accent-light); }
+.btn-link svg { width: 12px; height: 12px; }
+
+/* Footer */
+.footer { text-align: center; padding: 32px 0; border-top: 1px solid var(--border); color: var(--text-secondary); font-size: 12px; line-height: 1.8; }
+
+/* Responsive */
+@media (max-width: 768px) { .hero { padding: 32px 0 28px; } .hero h1 { font-size: 26px; } .hero-stats { gap: 20px; } .hero-stat-num { font-size: 32px; } .cards { grid-template-columns: 1fr; } }
+@media (max-width: 480px) { .container { padding: 0 16px; } .hero-sections { gap: 6px; } .hero-section-chip { font-size: 11px; padding: 3px 10px; } }
+</style>
+</head>
+<body>
+
+<!-- Hero -->
+<header class="hero">
+  <div class="container hero-inner">
+    <div class="hero-badge">W2624</div>
+    <div class="hero-date">信息采集周期：2026 年 6 月 8 日 — 6 月 14 日</div>
+    <h1>教练行业周报</h1>
+    <p class="hero-subtitle">Coaching Industry Weekly Briefing — 全球视野 · 专业洞察</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="hero-stat-num">16</div><div class="hero-stat-label">总条数</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">7</div><div class="hero-stat-label">版块</div></div>
+    </div>
+    <div class="hero-sections">
+      <div class="hero-section-chip">重大事件 <span class="chip-count">3</span></div>
+      <div class="hero-section-chip">媒体关注 <span class="chip-count">2</span></div>
+      <div class="hero-section-chip">行业动态 <span class="chip-count">4</span></div>
+      <div class="hero-section-chip">流派动态 <span class="chip-count">2</span></div>
+      <div class="hero-section-chip">人物动态 <span class="chip-count">1</span></div>
+      <div class="hero-section-chip">论文研究 <span class="chip-count">2</span></div>
+      <div class="hero-section-chip">公众舆情 <span class="chip-count">2</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- Sticky Nav -->
+<nav class="nav-wrap" id="navbar">
+  <div class="container nav">
+    <a href="#s1">重大事件</a>
+    <a href="#s2">媒体关注</a>
+    <a href="#s3">行业动态</a>
+    <a href="#s4">流派动态</a>
+    <a href="#s5">人物动态</a>
+    <a href="#s6">论文研究</a>
+    <a href="#s7">公众舆情</a>
+  </div>
+</nav>
+
+<main class="container">
+
+  <!-- 版块 1：国内及国际相关重大事件 -->
+  <section class="section" id="s1">
+    <div class="section-header">
+      <div class="section-icon">🌐</div>
+      <h2 class="section-title">国内及国际相关重大事件</h2>
+      <span class="section-count">3 条</span>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="card-header"><span class="card-num">1</span><h3 class="card-title">2026 世界杯开幕：AI 首次系统性进入赛事核心环节，Football AI Pro 战术平台免费开放全部 48 队</h3></div>
+        <div class="card-meta"><span class="source-chip">科创板日报</span><span class="time-chip">6 月 13 日</span></div>
+        <p class="card-summary">6 月 12 日凌晨世界杯揭幕，三项 AI 技术首秀：裁判视角 RefCam+AI 防抖直播、SAOT+3D 数字人越位判罚、Football AI Pro 生成式战术平台首次向全部 48 队免费开放，教练可用自然语言提问获取战术分析。</p>
+        <div class="card-action"><a href="https://finance.sina.com.cn/roll/2026-06-13/doc-inichnkk9372766.shtml" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+      <article class="card">
+        <div class="card-header"><span class="card-num">2</span><h3 class="card-title">SophiaAI 全球首发：首个面向女性的 AI 财务教练平台在新加坡和伦敦同步上线</h3></div>
+        <div class="card-meta"><span class="source-chip">PR Newswire</span><span class="time-chip">6 月 10 日</span></div>
+        <p class="card-summary">Sophia 发布全球首个性别智能 AI 财务教练平台 SophiaAI，提供 24/7 个性化投资辅导，通过雇主和金融机构渠道部署，覆盖新加坡、中国香港、澳大利亚和英国市场。</p>
+        <div class="card-action"><a href="https://www.prnewswire.com/news-releases/sophia-launches-sophiaai-the-platform-turning-working-women-from-cash-holders-to-active-investors-302796788.html" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+      <article class="card">
+        <div class="card-header"><span class="card-num">3</span><h3 class="card-title">Infosys 与法网延长 AI 合作至 2031 年：教练与球员分析工具再度升级</h3></div>
+        <div class="card-meta"><span class="source-chip">CXO Today</span><span class="time-chip">5 月 28 日</span></div>
+        <p class="card-summary">Infosys 与罗兰·加洛斯宣布合作延长至 2031 年，最新赛季推出 AI 增强型比赛分析、对话式教练助手及 3D 沉浸体验，为球员和教练提供更精准的赛事洞察工具。</p>
+        <div class="card-action"><a href="https://cxotoday.com/media-coverage/infosys-and-roland-garros-serve-up-ai-powered-digital-fan-experiences-extend-partnership-through-2031/" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 版块 2：主流媒体关注 -->
+  <section class="section" id="s2">
+    <div class="section-header">
+      <div class="section-icon">📺</div>
+      <h2 class="section-title">主流媒体关注</h2>
+      <span class="section-count">2 条</span>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="card-header"><span class="card-num">4</span><h3 class="card-title">36 氪深度盘点世界杯"黑科技"：从判罚系统到 AI 战术分析平台的全景梳理</h3></div>
+        <div class="card-meta"><span class="source-chip">36 氪</span><span class="time-chip">6 月 8 日</span></div>
+        <p class="card-summary">36 氪系统盘点本届世界杯引入的 AI 技术，涵盖 SAOT 越位判罚、智能芯片足球 Trionda、Football AI Pro 战术平台等，指出 AI 正从"辅助工具"进化为"赛事基础设施"。</p>
+        <div class="card-action"><a href="https://www.36kr.com/p/3843769850530056" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+      <article class="card">
+        <div class="card-header"><span class="card-num">5</span><h3 class="card-title">光明网专访联想刘军：AI 不再是锦上添花，而是世界杯的"核心引擎"</h3></div>
+        <div class="card-meta"><span class="source-chip">光明网</span><span class="time-chip">6 月 14 日</span></div>
+        <p class="card-summary">联想集团执行副总裁刘军在接受采访时表示，AI 已从辅助角色转变为赛事核心引擎。联想作为 FIFA 官方技术合作伙伴，为世界杯提供 VAR 3D 数字人可视化及 Football AI Pro 全套解决方案。</p>
+        <div class="card-action"><a href="https://tech.gmw.cn/2026-06/14/content_38827452.htm" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 版块 3：行业动态 -->
+  <section class="section" id="s3">
+    <div class="section-header">
+      <div class="section-icon">📊</div>
+      <h2 class="section-title">行业动态</h2>
+      <span class="section-count">4 条</span>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="card-header"><span class="card-num">6</span><h3 class="card-title">Risely 发布 2026 年 AI 教练平台综合评测：15 家平台横向对比</h3></div>
+        <div class="card-meta"><span class="source-chip">Risely</span><span class="time-chip">6 月 1 日</span></div>
+        <p class="card-summary">Risely 发布独立评测报告，覆盖 BetterUp、CoachHub、Risely、Valence、Rocky.ai 等 15 家 AI 教练平台，从定价、功能、企业适用性等维度提供透明对比，为 HR 和 L&D 决策提供参考。</p>
+        <div class="card-action"><a href="https://risely.me/compare/best-ai-coaching-platforms/" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+      <article class="card">
+        <div class="card-header"><span class="card-num">7</span><h3 class="card-title">SoftwareWorld 6 月更新 AI 教练软件榜单：个性化反馈与自动化工作流成核心评价维度</h3></div>
+        <div class="card-meta"><span class="source-chip">SoftwareWorld</span><span class="time-chip">6 月 9 日</span></div>
+        <p class="card-summary">SoftwareWorld 发布 6 月更新的 AI 教练软件排行榜，评估标准聚焦个性化反馈能力、自动化教练工作流、智能洞察生成等维度，反映企业端对 AI 教练工具的采购标准正在快速成熟。</p>
+        <div class="card-action"><a href="https://www.softwareworld.co/ai-coaching-software/" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+      <article class="card">
+        <div class="card-header"><span class="card-num">8</span><h3 class="card-title">中国健身教练行业政策调整：国职证书实操考核占比升至 60%，继续教育学时要求翻倍</h3></div>
+        <div class="card-meta"><span class="source-chip">锐星健身</span><span class="time-chip">6 月 8 日</span></div>
+        <p class="card-summary">国家体育总局推动 2026 年健身教练国职证书体系升级，实操考核占比从 40% 提至 60%，继续教育要求调整为每两年至少 40 学时。全国健身俱乐部已突破 5 万家，从业人员超 100 万。</p>
+        <div class="card-action"><a href="https://www.rstarfit.com/archives/1273" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+      <article class="card">
+        <div class="card-header"><span class="card-num">9</span><h3 class="card-title">Coach8 教练入门课第 257 期开班：6 月 13 日启动，聚焦"倾听能力"训练</h3></div>
+        <div class="card-meta"><span class="source-chip">Coach8</span><span class="time-chip">6 月 13 日</span></div>
+        <p class="card-summary">ICF 国际认证教练课程 Coach8 第 257 期入门课于 6 月 13 日开课，重点训练教练倾听能力，课程涵盖 10 小时 ICF 必修内容，适合改善职场关系、亲密关系及亲子关系的从业者。</p>
+        <div class="card-action"><a href="https://jl8.cn/index.php" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 版块 4：主要流派动态 -->
+  <section class="section" id="s4">
+    <div class="section-header">
+      <div class="section-icon">🏛️</div>
+      <h2 class="section-title">主要流派动态</h2>
+      <span class="section-count">2 条</span>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="card-header"><span class="card-num">10</span><h3 class="card-title">ICF 史诗级改革解读：取消录音考核 + 导师持证上岗，教练认证从"应试"转向"师徒制"</h3></div>
+        <div class="card-meta"><span class="source-chip">Coach8</span><span class="time-chip">6 月 7 日</span></div>
+        <p class="card-summary">ICF 5 月 13 日发布新规：2027 年起 ACC/PCC 录音考核由强化导师辅导替代，导师必须持有 MCS 认证。Coach8 解读称这是从"终结性评价"到"形成性评价"的根本转变，不是放水而是拉高实战门槛。</p>
+        <div class="card-action"><a href="https://jl8.cn/site/article_detail/id/6540" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+      <article class="card">
+        <div class="card-header"><span class="card-num">11</span><h3 class="card-title">Tandem Coach 发布 ICF 2026 认证变革全解读：MCS/CSS 双轨新体系详解</h3></div>
+        <div class="card-meta"><span class="source-chip">Tandem Coach</span><span class="time-chip">5 月 1 日</span></div>
+        <p class="card-summary">Tandem Coach 系统梳理 ICF 一周内发布的四项认证公告，详解导师教练专长认证（MCS）与教练督导专长认证（CSS）的申请路径、级别匹配规则及对现有持证教练的过渡期安排。</p>
+        <div class="card-action"><a href="https://tandemcoach.co/pulse/icf-credentialing-standards-org-coaching/" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 版块 5：热点人物动态 -->
+  <section class="section" id="s5">
+    <div class="section-header">
+      <div class="section-icon">👤</div>
+      <h2 class="section-title">热点人物动态</h2>
+      <span class="section-count">1 条</span>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="card-header"><span class="card-num">12</span><h3 class="card-title">联想刘军：世界杯是混合式 AI 的实战验证场，教练技术将从体育延伸至更多行业</h3></div>
+        <div class="card-meta"><span class="source-chip">光明网</span><span class="time-chip">6 月 14 日</span></div>
+        <p class="card-summary">联想集团执行副总裁兼中国区总裁刘军在世界杯嘉年华启幕活动上表示，联想以"2026 世界杯 AI 行动纲领"为路径，将世界杯验证过的 AI 教练与战术分析技术沉淀为标准化方案，向更多行业复制推广。</p>
+        <div class="card-action"><a href="https://tech.gmw.cn/2026-06/14/content_38827452.htm" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 版块 6：论文研究 -->
+  <section class="section" id="s6">
+    <div class="section-header">
+      <div class="section-icon">📄</div>
+      <h2 class="section-title">论文研究</h2>
+      <span class="section-count">2 条</span>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="card-header"><span class="card-num">13</span><h3 class="card-title">Springer 新书《Coaching in the Age of AI》：AI 时代教练理论与实践的系统性探索</h3></div>
+        <div class="card-meta"><span class="source-chip">Springer Nature</span><span class="time-chip">6 月</span></div>
+        <p class="card-summary">SpringerBriefs in Psychology 系列出版《Coaching in the Age of AI》，系统探讨 AI 技术对教练理论、伦理和实践的冲击与融合路径，为行业提供学术框架级别的思考参考。</p>
+        <div class="card-action"><a href="https://link.springer.com/book/10.1007/978-3-032-23332-5" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+      <article class="card">
+        <div class="card-header"><span class="card-num">14</span><h3 class="card-title">《Sports Medicine》研究：48 年世界杯备战模式演变——复杂性与 AI 辅助教练的进化</h3></div>
+        <div class="card-meta"><span class="source-chip">Sports Medicine</span><span class="time-chip">6 月 2 日</span></div>
+        <p class="card-summary">McCall 等人发表 48 年跨度研究，分析世界杯备战复杂度的指数级增长趋势，指出 AI 辅助教练系统正在重塑赛事准备方法论，为体育教练领域的数字化转型提供纵向实证支撑。</p>
+        <div class="card-action"><a href="https://link.springer.com/article/10.1007/s40279-026-02466-9" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 版块 7：公众舆情 -->
+  <section class="section" id="s7">
+    <div class="section-header">
+      <div class="section-icon">💬</div>
+      <h2 class="section-title">公众舆情</h2>
+      <span class="section-count">2 条</span>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="card-header"><span class="card-num">15</span><h3 class="card-title">世界杯 AI 教练引发讨论：Football AI Pro 是否会拉平强弱队差距？</h3></div>
+        <div class="card-meta"><span class="source-chip">社交媒体综合</span><span class="time-chip">本周</span></div>
+        <p class="card-summary">FIFA 首次向全部 48 队免费开放 AI 战术平台，引发公众对"技术民主化是否会缩小传统强队与弱队差距"的讨论。韩媒将 AI 教练比作替补席上的"孙子兵法"，但也有人质疑数据训练的偏差可能导致战术同质化。</p>
+        <div class="card-action"><a href="https://news.qq.com/rain/a/20260605A070VS00" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+      <article class="card">
+        <div class="card-header"><span class="card-num">16</span><h3 class="card-title">ICF 取消录音考核引发中国教练社群热议："考证捷径被堵，实战能力成唯一入场券"</h3></div>
+        <div class="card-meta"><span class="source-chip">Coach8 / 社交媒体</span><span class="time-chip">本周</span></div>
+        <p class="card-summary">ICF 新规在中国教练社群持续发酵。讨论焦点集中在：录音考核取消后英语不好的中国教练是否迎来红利，MCS 导师认证是否会导致培训成本上升，以及"持牌师徒制"能否真正提升行业质量。</p>
+        <div class="card-action"><a href="https://jl8.cn/site/article_detail/id/6540" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>共 16 条资讯 · 覆盖 7 个版块 · 采集周期 W2624（2026.06.08–06.14）</p>
+    <p>编号规则：W+年尾两位+ISO周数，如 W2624 = 2026 年第 24 周</p>
+    <p>数据来源：科创板日报、PR Newswire、CXO Today、36 氪、光明网、Risely、SoftwareWorld、<br>锐星健身、Coach8、Tandem Coach、Springer Nature、Sports Medicine、社交媒体综合</p>
+  </div>
+</footer>
+
+<script>
+const sections = document.querySelectorAll('.section');
+const navLinks = document.querySelectorAll('.nav a');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(link => link.classList.remove('active'));
+      const id = entry.target.id;
+      const active = document.querySelector(`.nav a[href="#${id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { rootMargin: '-30% 0px -60% 0px' });
+sections.forEach(s => observer.observe(s));
+
+const cards = document.querySelectorAll('.card');
+const cardObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i % 3 * 80);
+      cardObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+cards.forEach(card => cardObserver.observe(card));
+
+const navWrap = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navWrap.style.boxShadow = window.scrollY > 10 ? '0 2px 8px rgba(0,0,0,0.08)' : '0 1px 2px rgba(0,0,0,0.04)';
+});
+</script>
+</body>
+</html>
