@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>教练行业晨报 — 2026年6月14日</title>
+<style>
+:root {
+  --bg: #f8f9fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #6c757d;
+  --accent: #2d6a4f;
+  --accent-light: #d8f3dc;
+  --border: #e9ecef;
+  --tag-bg: #f0f4f8;
+  --tag-text: #495057;
+  --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-hover: 0 4px 12px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04);
+  --radius: 12px;
+  --radius-sm: 8px;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  --hero-gradient: linear-gradient(135deg, #1b4332 0%, #2d6a4f 40%, #40916c 100%);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+/* Hero */
+.hero {
+  background: var(--hero-gradient);
+  color: #fff;
+  padding: 48px 0 40px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  top: -50%; right: -20%;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.hero-inner { position: relative; z-index: 1; }
+.hero-date {
+  font-size: 14px; opacity: 0.8; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px;
+}
+.hero h1 {
+  font-size: 36px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 8px;
+}
+.hero-subtitle { font-size: 15px; opacity: 0.75; margin-bottom: 24px; }
+.hero-stats {
+  display: flex; gap: 32px; flex-wrap: wrap;
+}
+.hero-stat {
+  text-align: center;
+}
+.hero-stat-num { font-size: 42px; font-weight: 800; line-height: 1; }
+.hero-stat-label { font-size: 12px; opacity: 0.7; margin-top: 4px; letter-spacing: 1px; }
+.hero-sections {
+  display: flex; gap: 8px; flex-wrap: wrap; margin-top: 20px;
+}
+.hero-section-chip {
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(4px);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 12px;
+  display: flex; align-items: center; gap: 6px;
+}
+.hero-section-chip .chip-count {
+  background: rgba(255,255,255,0.25);
+  border-radius: 10px;
+  padding: 0 7px; font-size: 11px; font-weight: 600;
+}
+
+/* Nav */
+.nav-wrap {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+.nav {
+  display: flex; gap: 4px; overflow-x: auto; padding: 10px 0; -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.nav::-webkit-scrollbar { display: none; }
+.nav a {
+  flex-shrink: 0;
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-size: 13px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.nav a:hover, .nav a.active { background: var(--accent-light); color: var(--accent); font-weight: 600; }
+
+/* Sections */
+main { padding: 40px 0 60px; }
+.section { margin-bottom: 48px; scroll-margin-top: 60px; }
+.section-header {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--accent-light);
+}
+.section-icon {
+  width: 36px; height: 36px; border-radius: 10px;
+  background: var(--accent-light);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px;
+}
+.section-title { font-size: 20px; font-weight: 700; color: var(--accent); }
+.section-count { font-size: 13px; color: var(--text-secondary); margin-left: auto; }
+
+/* Cards Grid */
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px; }
+
+/* Card */
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  transition: box-shadow 0.25s, transform 0.25s;
+  display: flex; flex-direction: column; gap: 10px;
+  opacity: 0; transform: translateY(20px);
+}
+.card.visible { opacity: 1; transform: translateY(0); }
+.card:hover { box-shadow: var(--shadow-hover); transform: translateY(-2px); }
+.card-header { display: flex; align-items: flex-start; gap: 10px; }
+.card-num {
+  flex-shrink: 0;
+  width: 28px; height: 28px;
+  border-radius: 8px;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 12px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+.card-title { font-size: 15px; font-weight: 600; color: var(--text); line-height: 1.5; flex: 1; }
+.card-meta { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.source-chip {
+  display: inline-flex; align-items: center; gap: 4px;
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  font-size: 11px; padding: 2px 10px; border-radius: 12px;
+  font-weight: 500;
+}
+.time-chip {
+  font-size: 11px; color: var(--text-secondary);
+}
+.card-summary {
+  font-size: 13px; color: var(--text-secondary); line-height: 1.7;
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+}
+.card-action {
+  display: flex; justify-content: flex-end; margin-top: 2px;
+}
+.btn-link {
+  display: inline-flex; align-items: center; gap: 4px;
+  text-decoration: none;
+  font-size: 12px; font-weight: 600;
+  color: var(--accent);
+  padding: 5px 14px;
+  border: 1px solid var(--accent-light);
+  border-radius: 20px;
+  transition: all 0.2s;
+}
+.btn-link:hover { background: var(--accent-light); }
+.btn-link svg { width: 12px; height: 12px; }
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 32px 0;
+  border-top: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero { padding: 32px 0 28px; }
+  .hero h1 { font-size: 26px; }
+  .hero-stats { gap: 20px; }
+  .hero-stat-num { font-size: 32px; }
+  .cards { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .container { padding: 0 16px; }
+  .hero-sections { gap: 6px; }
+  .hero-section-chip { font-size: 11px; padding: 3px 10px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Hero -->
+<header class="hero">
+  <div class="container hero-inner">
+    <div class="hero-date">2026 年 6 月 14 日 · 星期日</div>
+    <h1>教练行业晨报</h1>
+    <p class="hero-subtitle">Coaching Industry Daily Briefing — 全球视野 · 专业洞察</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-num">28</div>
+        <div class="hero-stat-label">总条数</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">7</div>
+        <div class="hero-stat-label">版块</div>
+      </div>
+    </div>
+    <div class="hero-sections">
+      <div class="hero-section-chip">重大事件 <span class="chip-count">5</span></div>
+      <div class="hero-section-chip">媒体关注 <span class="chip-count">3</span></div>
+      <div class="hero-section-chip">行业动态 <span class="chip-count">6</span></div>
+      <div class="hero-section-chip">流派动态 <span class="chip-count">4</span></div>
+      <div class="hero-section-chip">人物动态 <span class="chip-count">2</span></div>
+      <div class="hero-section-chip">论文研究 <span class="chip-count">4</span></div>
+      <div class="hero-section-chip">公众舆情 <span class="chip-count">4</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- Sticky Nav -->
+<nav class="nav-wrap" id="navbar">
+  <div class="container nav">
+    <a href="#s1">重大事件</a>
+    <a href="#s2">媒体关注</a>
+    <a href="#s3">行业动态</a>
+    <a href="#s4">流派动态</a>
+    <a href="#s5">人物动态</a>
+    <a href="#s6">论文研究</a>
+    <a href="#s7">公众舆情</a>
+  </div>
+</nav>
+
+<main class="container">
+
+  <!-- 版块 1：国内及国际相关重大事件 -->
+  <section class="section" id="s1">
+    <div class="section-header">
+      <div class="section-icon">🌐</div>
+      <h2 class="section-title">国内及国际相关重大事件</h2>
+      <span class="section-count">5 条</span>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="card-header"><span class="card-num">1</span><h3 class="card-title">ICF 发布《2026–2029 战略计划》：从"发证机关"到"社会基建总工程师"</h3></div>
+        <div class="card-meta"><span class="source-chip">Coach8</span><span class="time-chip">3 天前</span></div>
+        <p class="card-summary">ICF 正式发布三年战略路线图，愿景从"赋能个人"扩展至"赋能社会"，教练技术将从少数人奢侈品转变为教育、医疗、社区治理等领域的社会基础设施。</p>
+        <div class="card-action"><a href="https://coach8.com.cn/site/article_detail/id/3287" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+      <article class="card">
+        <div class="card-header"><span class="card-num">2</span><h3 class="card-title">ICF 2026 年 4 月认证体系重大变革：新增导师教练与教练督导专项资质</h3></div>
+        <div class="card-meta"><span class="source-chip">AxeRocket</span><span class="time-chip">4 月 29 日</span></div>
+        <p class="card-summary">ICF 推出导师教练资格（MCQ）和教练督导资格两大新认证，替代原有单次录播评审的绩效评估体系，转向持续专业发展与同伴督导模式，为行业建立更清晰的能力层级。</p>
+        <div class="card-action"><a href="https://www.axerocket.com/insights/icf-april-credentialing-changes-quality-standards-career-coaching-april-2026" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+      <article class="card">
+        <div class="card-header"><span class="card-num">3</span><h3 class="card-title">2026 世界杯首次引入"AI 教练"：替补席上的"孙子兵法"</h3></div>
+        <div class="card-meta"><span class="source-chip">腾讯新闻</span><span class="time-chip">6 月 5 日</span></div>
+        <p class="card-summary">据《福布斯》报道，即将开幕的 2026 世界杯将首次引入人工智能教练系统，利用实时数据分析协助战术决策，被韩媒称为缩小强弱队差距的历史性创新。</p>
+        <div class="card-action"><a href="https://news.qq.com/rain/a/20260605A070VS00" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+      <article class="card">
+        <div class="card-header"><span class="card-num">4</span><h3 class="card-title">《ICF 2026 教练未来报告》发布："Digital First, Human Optional"时代到来</h3></div>
+        <div class="card-meta"><span class="source-chip">ICF 官方</span><span class="time-chip">1 月 26 日</span></div>
+        <p class="card-summary">报告基于 24 位全球专家访谈和 52 位行业领袖调研，提出"数字化先行、人类可选"的颠覆性判断——基础教练对话将由 AI 接管，人类教练的深度共情与觉察成为稀缺价值。</p>
+        <div class="card-action"><a href="https://coachingfederation.org/blog/leading-whats-next-for-coaching-the-2026-icf-coaching-futures-report/" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+      <article class="card">
+        <div class="card-header"><span class="card-num">5</span><h3 class="card-title">Infosys 携手罗兰·加洛斯推出 AI 赋能的数字教练与球员互动体验</h3></div>
+        <div class="card-meta"><span class="source-chip">新浪财经</span><span class="time-chip">6 月 8 日</span></div>
+        <p class="card-summary">Infosys Topaz 平台利用生成式 AI 与智能体技术，为法网赛事打造沉浸式数字体验，深化球迷、教练、球员及媒体与网球运动的实时互动与分析洞察。</p>
+        <div class="card-action"><a href="https://finance.sina.com.cn/stock/usstock/c/2026-06-08/doc-iniasmvq8804500.shtml" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 版块 2：主流媒体关注 -->
+  <section class="section" id="s2">
+    <div class="section-header">
+      <div class="section-icon">📺</div>
+      <h2 class="section-title">主流媒体关注</h2>
+      <span class="section-count">3 条</span>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="card-header"><span class="card-num">6</span><h3 class="card-title">搜狐深度报道：2036 年教练行业四种惊人预测——AI、全球化与本土化的终极博弈</h3></div>
+        <div class="card-meta"><span class="source-chip">搜狐</span><span class="time-chip">4 月 22 日</span></div>
+        <p class="card-summary">基于 ICF 未来报告，分析教练行业正站在巨大变革门槛。预测 AI 教练规模化、按需微交易模式、本土化与全球化博弈、以及监管标准化将彻底重塑行业格局。</p>
+        <div class="card-action"><a href="https://www.sohu.com/a/1013074389_120091393" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+      <article class="card">
+        <div class="card-header"><span class="card-num">7</span><h3 class="card-title">知乎热文：2026 年教练三大趋势——重塑个体与组织成长路径</h3></div>
+        <div class="card-meta"><span class="source-chip">知乎</span><span class="time-chip">3 月 9 日</span></div>
+        <p class="card-summary">分析 AI 深度嵌入教练流程、专业认证成为市场入场券、以及企业端需求从"锦上添花"转向"战略刚需"三大趋势，为从业者提供 2026 年突破口参考。</p>
+        <div class="card-action"><a href="https://zhuanlan.zhihu.com/p/2012927118531641943" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+      <article class="card">
+        <div class="card-header"><span class="card-num">8</span><h3 class="card-title">小宇宙播客《教练会谈室》专题：当 AI 优先遇上人类教练</h3></div>
+        <div class="card-meta"><span class="source-chip">小宇宙 FM</span><span class="time-chip">2 月 27 日</span></div>
+        <p class="card-summary">播客节目深度拆解 ICF 未来报告，从商业与人性交叉视角探讨 AI 对教练行业的冲击与机遇，对话全球先锋实践者，为中文教练社群提供前沿解读。</p>
+        <div class="card-action"><a href="https://www.xiaoyuzhoufm.com/episode/69a1633166e2c303779f8ba9" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 版块 3：行业动态 -->
+  <section class="section" id="s3">
+    <div class="section-header">
+      <div class="section-icon">📊</div>
+      <h2 class="section-title">行业动态</h2>
+      <span class="section-count">6 条</span>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="card-header"><span class="card-num">9</span><h3 class="card-title">全球教练市场突破 53.4 亿美元：十年翻倍，从业者超 12.2 万人</h3></div>
+        <div class="card-meta"><span class="source-chip">Simply.Coach</span><span class="time-chip">5 月 11 日</span></div>
+        <p class="card-summary">ICF 2026 统计报告显示，全球教练行业收入从 2015 年 23.5 亿美元增长至 53.4 亿美元，活跃教练 122,974 人，北美以 34,200 人领跑，72% 为女性从业者。</p>
+        <div class="card-action"><a href="https://simply.coach/blog/icf-coaching-statistics-industry-insights/" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+      <article class="card">
+        <div class="card-header"><span class="card-num">10</span><h3 class="card-title">AI 教练工具市场预计 2026 年底达 58 亿美元，CAGR 27%</h3></div>
+        <div class="card-meta"><span class="source-chip">Life Coaching Certification</span><span class="time-chip">本周</span></div>
+        <p class="card-summary">75% 高绩效教练企业已常规使用 AI 工具，教练平台市场从 42.2 亿增长至 2036 年 120.1 亿美元。45% 教练认为 AI 在增强而非威胁其专业实践。</p>
+        <div class="card-action"><a href="https://lifecoachingcertification.net/blog/life-coaching-trends-2026/" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+      <article class="card">
+        <div class="card-header"><span class="card-num">11</span><h3 class="card-title">高管教练市场 2026 年估值 1,129.8 亿美元，预计 2031 年达 1,745.3 亿</h3></div>
+        <div class="card-meta"><span class="source-chip">Life Coaching Certification</span><span class="time-chip">本周</span></div>
+        <p class="card-summary">高管教练为行业收入最高细分，平均年薪 82,949 美元。约 1/3 财富 500 强企业已采用高管教练服务，中小企业支出增速最快达 11.17% CAGR。</p>
+        <div class="card-action"><a href="https://lifecoachingcertification.net/blog/life-coaching-trends-2026/" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+      <article class="card">
+        <div class="card-header"><span class="card-num">12</span><h3 class="card-title">健康与保健教练爆发增长：85% 教练收到心理健康支持请求</h3></div>
+        <div class="card-meta"><span class="source-chip">Life Coaching Certification</span><span class="time-chip">本周</span></div>
+        <p class="card-summary">全球健康教练市场 2026 年达 201 亿美元，CAGR 8.3%。WHO 估计每年因抑郁焦虑损失 1 万亿美元生产力，推动企业端健康教练需求激增。</p>
+        <div class="card-action"><a href="https://lifecoachingcertification.net/blog/life-coaching-trends-2026/" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+      <article class="card">
+        <div class="card-header"><span class="card-num">13</span><h3 class="card-title">教练平台市场持续高增长：2026 年 42.2 亿 → 2036 年 120.1 亿美元</h3></div>
+        <div class="card-meta"><span class="source-chip">Simply.Coach</span><span class="time-chip">5 月 11 日</span></div>
+        <p class="card-summary">教练科技平台 CAGR 达 11%，视频会议、自动提醒、数字表单、实时进度看板、内置支付系统成为行业标配工具。91% 教练为执业状态。</p>
+        <div class="card-action"><a href="https://simply.coach/blog/icf-coaching-statistics-industry-insights/" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+      <article class="card">
+        <div class="card-header"><span class="card-num">14</span><h3 class="card-title">企业赞助客户占比升至 57%：B2B 教练需求成为行业新引擎</h3></div>
+        <div class="card-meta"><span class="source-chip">ANHCO</span><span class="time-chip">4 月 4 日</span></div>
+        <p class="card-summary">企业付费客户占比从 2019 年 52% 升至 57%，盖洛普报告显示对管理者进行教练培训可提升 20%–28% 绩效。85% 教练已持有认证资质。</p>
+        <div class="card-action"><a href="https://anhco.org/blog/state-of-coaching-industry-2026-27-trends-amp-opportunities-revealed" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 版块 4：主要流派动态 -->
+  <section class="section" id="s4">
+    <div class="section-header">
+      <div class="section-icon">🏛️</div>
+      <h2 class="section-title">主要流派动态</h2>
+      <span class="section-count">4 条</span>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="card-header"><span class="card-num">15</span><h3 class="card-title">埃里克森国际教练学院持续领跑中国 PCC 认证培训市场</h3></div>
+        <div class="card-meta"><span class="source-chip">Erickson China</span><span class="time-chip">持续更新</span></div>
+        <p class="card-summary">作为最早进入中国的国际教练机构之一，埃里克森以"解决方案导向"教练模型融合心理学、量子四象限与管理学工具，培养中国首位 PCC 认证教练考官。</p>
+        <div class="card-action"><a href="https://www.ericksonchina.com/" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+      <article class="card">
+        <div class="card-header"><span class="card-num">16</span><h3 class="card-title">ICF 教练核心能力模型 2025 版全面更新：基于全球 3000 名教练实证</h3></div>
+        <div class="card-meta"><span class="source-chip">知乎</span><span class="time-chip">持续有效</span></div>
+        <p class="card-summary">新版能力模型基于全球近 3000 名教练的实证数据更新，ICF 道德规范同步升级，涵盖四大核心价值观：专业性、合作、人性化与公平。</p>
+        <div class="card-action"><a href="https://zhuanlan.zhihu.com/p/1949500655627633714" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+      <article class="card">
+        <div class="card-header"><span class="card-num">17</span><h3 class="card-title">NLP 教练与积极心理学教练趋向融合：应对心理健康需求爆发</h3></div>
+        <div class="card-meta"><span class="source-chip">行业观察</span><span class="time-chip">本周</span></div>
+        <p class="card-summary">面对 85% 教练收到心理健康支持请求的趋势，NLP 技术与积极心理学、正念教练方法加速融合，多家培训机构推出跨流派整合课程，满足市场对综合性教练能力的需求。</p>
+        <div class="card-action"><a href="https://lifecoachingcertification.net/blog/life-coaching-trends-2026/" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+      <article class="card">
+        <div class="card-header"><span class="card-num">18</span><h3 class="card-title">利基专业化取代通才教练：专业教练收入是通才的 3–4 倍</h3></div>
+        <div class="card-meta"><span class="source-chip">Life Coaching Certification</span><span class="time-chip">本周</span></div>
+        <p class="card-summary">通才生活教练时薪 75–150 美元，专业化教练 300–500+ 美元。增长最快利基：高管教练、健康保健、职业转型、AI 应用教练。差异化来自定位而非技能。</p>
+        <div class="card-action"><a href="https://lifecoachingcertification.net/blog/life-coaching-trends-2026/" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 版块 5：热点人物动态 -->
+  <section class="section" id="s5">
+    <div class="section-header">
+      <div class="section-icon">👤</div>
+      <h2 class="section-title">热点人物动态</h2>
+      <span class="section-count">2 条</span>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="card-header"><span class="card-num">19</span><h3 class="card-title">ICF 全球领导班子推动战略升级：教练行业进入"社会影响力"驱动新阶段</h3></div>
+        <div class="card-meta"><span class="source-chip">Coach8 / ICF 官方</span><span class="time-chip">6 月</span></div>
+        <p class="card-summary">ICF 领导层在 2026–2029 战略中提出"有纪律的选择"，在收入可持续性与社会影响力间寻找平衡，用 KPI 衡量利益相关者价值、触达率、组织效能与财务健康。</p>
+        <div class="card-action"><a href="https://coach8.com.cn/site/article_detail/id/3287" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+      <article class="card">
+        <div class="card-header"><span class="card-num">20</span><h3 class="card-title">教练平台赛道领军者动态：CoachStackHub 发布《2026 教练实践管理状况》报告</h3></div>
+        <div class="card-meta"><span class="source-chip">CoachStackHub</span><span class="time-chip">5 月 3 日</span></div>
+        <p class="card-summary">行业权威数据报告揭示 200 亿美元+市场规模、各细分领域平均课时费、认证对收入的量化影响以及教练实践健康基准，为从业者提供数据驱动的经营决策参考。</p>
+        <div class="card-action"><a href="https://coachstackhub.ai/research/state-of-coaching-2026" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 版块 6：论文研究 -->
+  <section class="section" id="s6">
+    <div class="section-header">
+      <div class="section-icon">📄</div>
+      <h2 class="section-title">论文研究</h2>
+      <span class="section-count">4 条</span>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="card-header"><span class="card-num">21</span><h3 class="card-title">《Coaching: An International Journal》最新一期（Volume 19, Issue 1, 2026）</h3></div>
+        <div class="card-meta"><span class="source-chip">Taylor &amp; Francis</span><span class="time-chip">2026 年</span></div>
+        <p class="card-summary">国际教练领域核心学术期刊最新卷，涵盖教练理论、研究与实践的多篇同行评审论文，为教练学术研究的前沿阵地。</p>
+        <div class="card-action"><a href="https://www.tandfonline.com/toc/rcoa20/current" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+      <article class="card">
+        <div class="card-header"><span class="card-num">22</span><h3 class="card-title">《教练在人力资源发展中的角色：当前研究与未来方向》（2026.02）</h3></div>
+        <div class="card-meta"><span class="source-chip">Taylor &amp; Francis</span><span class="time-chip">2 月 27 日</span></div>
+        <p class="card-summary">系统回顾过去 20 年教练作为发展干预手段的研究进展，指出该领域虽被大量案例研究主导，但在方法论严谨性和理论建构方面仍有显著提升空间。</p>
+        <div class="card-action"><a href="https://www.tandfonline.com/doi/full/10.1080/13678868.2026.2638083" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+      <article class="card">
+        <div class="card-header"><span class="card-num">23</span><h3 class="card-title">SAGE 期刊：教学教练模型开发的挑战与启示</h3></div>
+        <div class="card-meta"><span class="source-chip">SAGE Journals</span><span class="time-chip">1 月 9 日</span></div>
+        <p class="card-summary">研究聚焦教学教练（Instructional Coaching）在支持教师实施循证实践中的有效性，揭示教练干预设计的关键差距，为教育领域教练应用提供实证基础。</p>
+        <div class="card-action"><a href="https://journals.sagepub.com/doi/full/10.1177/07419325241304126" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+      <article class="card">
+        <div class="card-header"><span class="card-num">24</span><h3 class="card-title">Springer Nature Link 教练研究专题：最新论文与发现汇总</h3></div>
+        <div class="card-meta"><span class="source-chip">Springer Nature</span><span class="time-chip">6 月 2 日</span></div>
+        <p class="card-summary">Springer 学术平台汇集教练领域最新研究论文与专家观点，覆盖高管教练、健康教练、教育教练等多个子领域的前沿学术动态。</p>
+        <div class="card-action"><a href="https://link.springer.com/subjects/coaching" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 版块 7：公众舆情 -->
+  <section class="section" id="s7">
+    <div class="section-header">
+      <div class="section-icon">💬</div>
+      <h2 class="section-title">公众舆情</h2>
+      <span class="section-count">4 条</span>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="card-header"><span class="card-num">25</span><h3 class="card-title">社交媒体热议："流量狂欢"vs"专业深耕"——教练行业的良币驱逐劣币之战</h3></div>
+        <div class="card-meta"><span class="source-chip">Coach8 / 社交媒体</span><span class="time-chip">6 月</span></div>
+        <p class="card-summary">围绕 ICF 新战略的公众讨论聚焦于"无证驾驶"教练的生存空间将被挤压，行业从流量驱动转向专业价值驱动，"速成班"和"暴富课"受到越来越多质疑。</p>
+        <div class="card-action"><a href="https://coach8.com.cn/site/article_detail/id/3287" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+      <article class="card">
+        <div class="card-header"><span class="card-num">26</span><h3 class="card-title">体育舆论生态反思："算法如何把教练逼上绝路"</h3></div>
+        <div class="card-meta"><span class="source-chip">搜狐</span><span class="time-chip">4 月 21 日</span></div>
+        <p class="card-summary">当极端情绪取代专业技战术分析，教练传承变成派系斗争，社交媒体流量狂欢正在扭曲体育教练行业的公众认知。文章呼吁回归专业理性与体育精神。</p>
+        <div class="card-action"><a href="https://www.sohu.com/a/1012168530_122408885" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+      <article class="card">
+        <div class="card-header"><span class="card-num">27</span><h3 class="card-title">Z 世代与千禧一代驱动教练消费变革：56% 收入来自虚拟平台</h3></div>
+        <div class="card-meta"><span class="source-chip">Life Coaching Certification</span><span class="time-chip">本周</span></div>
+        <p class="card-summary">年轻一代成为增长最快教练客群，订阅模式占收入 45%（CAGR 10.9%），他们通过社交媒体和播客寻找教练，偏好真实感、明确成果和灵活交付形式。</p>
+        <div class="card-action"><a href="https://lifecoachingcertification.net/blog/life-coaching-trends-2026/" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+      <article class="card">
+        <div class="card-header"><span class="card-num">28</span><h3 class="card-title">职业教练公众认知转型：从"少数人奢侈品"到"社会普遍基础设施"</h3></div>
+        <div class="card-meta"><span class="source-chip">Coach8</span><span class="time-chip">6 月</span></div>
+        <p class="card-summary">ICF 新愿景引发公众对教练行业定位的广泛讨论：教练服务能否从精英专属走向普惠化？教育系统、医疗康养、社区治理、青年发展等社会场景中的教练应用成为舆论焦点。</p>
+        <div class="card-action"><a href="https://coach8.com.cn/site/article_detail/id/3287" target="_blank" rel="noopener noreferrer" class="btn-link">阅读原文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div>
+      </article>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>共 28 条资讯 · 覆盖 7 个版块 · 数据截至 2026 年 6 月 14 日 14:30（北京时间）</p>
+    <p>数据来源：ICF 官方、Coach8、Simply.Coach、Life Coaching Certification、ANHCO、CoachStackHub、<br>搜狐、知乎、腾讯新闻、新浪财经、小宇宙 FM、Taylor &amp; Francis、SAGE Journals、Springer Nature</p>
+    <p style="margin-top:8px; opacity:0.6;">AI HOT 日报接口（aihot.virxact.com）已调用，本次因教练行业内容不在其覆盖范围，自动回退至公开信息检索。</p>
+  </div>
+</footer>
+
+<script>
+// Smooth nav highlight
+const sections = document.querySelectorAll('.section');
+const navLinks = document.querySelectorAll('.nav a');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(link => link.classList.remove('active'));
+      const id = entry.target.id;
+      const active = document.querySelector(`.nav a[href="#${id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { rootMargin: '-30% 0px -60% 0px' });
+sections.forEach(s => observer.observe(s));
+
+// Scroll reveal animation
+const cards = document.querySelectorAll('.card');
+const cardObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i % 3 * 80);
+      cardObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+cards.forEach(card => cardObserver.observe(card));
+
+// Sticky nav shadow
+const navWrap = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 10) {
+    navWrap.style.boxShadow = '0 2px 8px rgba(0,0,0,0.08)';
+  } else {
+    navWrap.style.boxShadow = '0 1px 2px rgba(0,0,0,0.04)';
+  }
+});
+</script>
+</body>
+</html>
