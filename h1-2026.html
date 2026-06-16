@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Y26上·教练行业半年报</title>
+<meta name="description" content="Y26上·教练行业半年报 — 2026年上半年教练行业资讯汇总，共23条资讯覆盖7大版块">
+<meta property="og:title" content="Y26上·教练行业半年报">
+<meta property="og:description" content="2026年上半年教练行业资讯汇总，共收录23条资讯，覆盖7大版块。ICF未来报告发布、认证体系大改、AI教练浪潮来袭。">
+<meta property="og:url" content="https://judie2010.github.io/coaching-zb/h1-2026.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://coaching-zb-1307959336.cos.ap-guangzhou.myqcloud.com/og-image.jpg">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="1024">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://coaching-zb-1307959336.cos.ap-guangzhou.myqcloud.com/og-image.jpg">
+<style>
+:root {
+  --bg: #f8f9fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #6c757d;
+  --accent: #2d6a4f;
+  --accent-light: #d8f3dc;
+  --border: #e9ecef;
+  --tag-bg: #f0f4f8;
+  --tag-text: #495057;
+  --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-hover: 0 4px 12px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04);
+  --radius: 12px;
+  --radius-sm: 8px;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  --hero-gradient: linear-gradient(135deg, #1b4332 0%, #2d6a4f 40%, #40916c 100%);
+}
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { color: var(--accent); text-decoration: none; }
+/* Hero */
+.hero { background: var(--hero-gradient); color: #fff; padding: 48px 24px 40px; text-align: center; }
+.hero-badge { display: inline-block; background: rgba(255,255,255,0.18); backdrop-filter: blur(8px); padding: 6px 20px; border-radius: 20px; font-size: 14px; font-weight: 600; letter-spacing: 1px; margin-bottom: 16px; border: 1px solid rgba(255,255,255,0.22); }
+.hero h1 { font-size: clamp(28px,5vw,42px); font-weight: 800; margin-bottom: 8px; letter-spacing: -0.5px; }
+.hero .subtitle { font-size: 15px; opacity: .88; margin-bottom: 24px; }
+.hero .period { font-size: 13px; opacity: .72; margin-bottom: 20px; }
+.hero .period em { font-style: normal; background: rgba(255,255,255,0.15); padding: 2px 8px; border-radius: 4px; }
+.hero-stats { display: flex; justify-content: center; gap: 32px; margin-bottom: 24px; }
+.hero-stats .stat { text-align: center; }
+.hero-stats .stat-num { font-size: 32px; font-weight: 800; }
+.hero-stats .stat-label { font-size: 12px; opacity: .7; }
+.hero-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.hero-chips .chip { background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.2); padding: 4px 14px; border-radius: 16px; font-size: 12px; white-space: nowrap; }
+/* Sticky Nav */
+.nav-bar { position: sticky; top: 0; z-index: 100; background: var(--card-bg); border-bottom: 1px solid var(--border); padding: 0 16px; transition: box-shadow .3s; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.nav-bar.scrolled { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+.nav-inner { display: flex; gap: 0; max-width: 960px; margin: 0 auto; }
+.nav-inner a { flex-shrink: 0; padding: 12px 14px; font-size: 13px; color: var(--text-secondary); border-bottom: 2px solid transparent; transition: all .2s; white-space: nowrap; }
+.nav-inner a:hover, .nav-inner a.active { color: var(--accent); border-bottom-color: var(--accent); }
+/* Section */
+.section { max-width: 960px; margin: 0 auto; padding: 40px 20px 0; }
+.section-header { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+.section-icon { font-size: 24px; }
+.section-title { font-size: 20px; font-weight: 700; color: var(--accent); }
+.section-line { flex: 1; height: 1px; background: var(--border); }
+/* Card Grid */
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+.card { background: var(--card-bg); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); border: 1px solid var(--border); opacity: 0; transform: translateY(16px); transition: opacity .5s ease, transform .5s ease, box-shadow .2s; }
+.card.visible { opacity: 1; transform: translateY(0); }
+.card:hover { box-shadow: var(--shadow-hover); }
+.card-num { display: inline-block; background: var(--accent); color: #fff; font-size: 11px; font-weight: 700; width: 24px; height: 24px; line-height: 24px; text-align: center; border-radius: 6px; margin-bottom: 10px; }
+.card-title { font-size: 16px; font-weight: 600; margin-bottom: 8px; line-height: 1.5; }
+.card-meta { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+.source-chip { background: var(--tag-bg); color: var(--tag-text); font-size: 11px; padding: 2px 10px; border-radius: 10px; }
+.time-chip { background: var(--accent-light); color: var(--accent); font-size: 11px; padding: 2px 10px; border-radius: 10px; }
+.card-summary { font-size: 14px; color: var(--text-secondary); line-height: 1.65; margin-bottom: 12px; }
+.card-action { display: inline-block; background: var(--accent); color: #fff; font-size: 12px; padding: 6px 16px; border-radius: var(--radius-sm); transition: background .2s; }
+.card-action:hover { background: #1b4332; }
+/* Footer */
+.footer { max-width: 960px; margin: 48px auto 0; padding: 32px 20px; border-top: 1px solid var(--border); text-align: center; }
+.footer p { font-size: 13px; color: var(--text-secondary); line-height: 1.8; }
+.footer .back-home { display: inline-block; margin-top: 12px; background: var(--accent); color: #fff; padding: 8px 24px; border-radius: var(--radius-sm); font-size: 14px; }
+.footer .back-home:hover { background: #1b4332; }
+/* Responsive */
+@media (max-width: 640px) {
+  .hero { padding: 36px 16px 28px; }
+  .hero-stats { gap: 20px; }
+  .hero-stats .stat-num { font-size: 26px; }
+  .card-grid { grid-template-columns: 1fr; }
+  .section { padding: 28px 16px 0; }
+}
+</style>
+</head>
+<body>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-badge">Y26上 · 半年报</div>
+  <h1>Y26上·教练行业半年报</h1>
+  <div class="subtitle">Coaching Industry Weekly Briefing — 全球视野 · 专业洞察</div>
+  <div class="period">信息采集周期：<em>2026 年 1 月 — 2026 年 6 月</em>（上半年资讯汇总）</div>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-num">23</div><div class="stat-label">资讯总条数</div></div>
+    <div class="stat"><div class="stat-num">7</div><div class="stat-label">版块覆盖</div></div>
+  </div>
+  <div class="hero-chips">
+    <span class="chip">🌐 重大事件 5</span>
+    <span class="chip">📺 媒体关注 3</span>
+    <span class="chip">📊 行业动态 5</span>
+    <span class="chip">🏛 流派动态 3</span>
+    <span class="chip">👤 人物动态 2</span>
+    <span class="chip">📄 论文研究 3</span>
+    <span class="chip">💬 公众舆情 2</span>
+  </div>
+</div>
+
+<!-- Sticky Nav -->
+<nav class="nav-bar" id="navBar">
+  <div class="nav-inner">
+    <a href="#s1">🌐 重大事件</a>
+    <a href="#s2">📺 媒体关注</a>
+    <a href="#s3">📊 行业动态</a>
+    <a href="#s4">🏛 流派动态</a>
+    <a href="#s5">👤 人物动态</a>
+    <a href="#s6">📄 论文研究</a>
+    <a href="#s7">💬 公众舆情</a>
+  </div>
+</nav>
+
+<!-- S1 重大事件 -->
+<div class="section" id="s1">
+  <div class="section-header"><span class="section-icon">🌐</span><span class="section-title">国内及国际相关重大事件</span><div class="section-line"></div></div>
+  <div class="card-grid">
+
+    <div class="card">
+      <div class="card-num">1</div>
+      <div class="card-title">ICF 发布《2026 教练未来报告》："数字化先行，人类可选"</div>
+      <div class="card-meta"><span class="source-chip">ICF</span><span class="time-chip">1 月</span></div>
+      <div class="card-summary">ICF 发布首份教练未来报告，提出"Digital First, Human Optional"范式——基础性教练对话将由 AI 接管，人类教练将成为高阶"可选项"，引发行业热议。</div>
+      <a class="card-action" href="https://icfcoachingfuturesreport.com/wp-content/uploads/sites/2/2026/01/icf-coaching-futures-report-2026.pdf" target="_blank" rel="noopener noreferrer">阅读原文</a>
+    </div>
+
+    <div class="card">
+      <div class="card-num">2</div>
+      <div class="card-title">ICF 发布《2026-2029 战略计划》：教练行业"大航海时代"开启</div>
+      <div class="card-meta"><span class="source-chip">Coach8</span><span class="time-chip">3 月</span></div>
+      <div class="card-summary">ICF 正式发布三年战略路线图，开篇即强调"教练的世界正在进化"，提出扩展教练可及性、推动行业协作生态等核心方向，被视为行业里程碑。</div>
+      <a class="card-action" href="https://coach8.com.cn/site/article_detail/id/3287" target="_blank" rel="noopener noreferrer">阅读原文</a>
+    </div>
+
+    <div class="card">
+      <div class="card-num">3</div>
+      <div class="card-title">BetterUp 举办 Uplift 2026 大会：Adam Grant、Brené Brown 同台</div>
+      <div class="card-meta"><span class="source-chip">Business Wire</span><span class="time-chip">3 月 18 日</span></div>
+      <div class="card-summary">全球最大 AI 教练平台 BetterUp 宣布年度峰会 Uplift 2026 于旧金山举办，Adam Grant、Brené Brown 等主讲，主题"变革推动者"聚焦 AI 时代领导力转型。</div>
+      <a class="card-action" href="https://www.betterup.com/press/kristen-bell-adam-grant-bren%C3%A9-brown-pete-sohn-derrick-henry-and-nick-saban-to-headline-betterups-uplift-2026" target="_blank" rel="noopener noreferrer">阅读原文</a>
+    </div>
+
+    <div class="card">
+      <div class="card-num">4</div>
+      <div class="card-title">Vistage 收购 TEC Canada，CEO 同侪教练版图北扩</div>
+      <div class="card-meta"><span class="source-chip">PR Newswire</span><span class="time-chip">5 月 12 日</span></div>
+      <div class="card-summary">全球最大 CEO 教练组织 Vistage 收购加拿大长期授权方 TEC Canada，1600+ 成员纳入全球网络，CEO 同侪教练模式在北美一体化加速。</div>
+      <a class="card-action" href="https://www.morningstar.com/news/pr-newswire/20260512la54462/vistage-acquires-tec-canada-to-expand-ceo-peer-advisory-in-north-america" target="_blank" rel="noopener noreferrer">阅读原文</a>
+    </div>
+
+    <div class="card">
+      <div class="card-num">5</div>
+      <div class="card-title">ICF 史诗级大改：取消录音考核，全面推行导师持证上岗</div>
+      <div class="card-meta"><span class="source-chip">Coach8</span><span class="time-chip">6 月 7 日</span></div>
+      <div class="card-summary">ICF 5 月 13 日公告：ACC/PCC 录音盲审 2027 年 4 月起取消，改为强化导师辅导；所有导师须持 MCS 认证。从"一考定终身"转向"过程即结果"。</div>
+      <a class="card-action" href="https://jl8.cn/site/article_detail/id/6540" target="_blank" rel="noopener noreferrer">阅读原文</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- S2 媒体关注 -->
+<div class="section" id="s2">
+  <div class="section-header"><span class="section-icon">📺</span><span class="section-title">主流媒体关注</span><div class="section-line"></div></div>
+  <div class="card-grid">
+
+    <div class="card">
+      <div class="card-num">6</div>
+      <div class="card-title">搜狐：2026 全球顶尖 CEO 及高管教练机构分析报告</div>
+      <div class="card-meta"><span class="source-chip">搜狐</span><span class="time-chip">4 月 22 日</span></div>
+      <div class="card-summary">Vistage 发布全球高管教练机构十强榜，Vistage、Marshall Goldsmith、沃顿商学院分列前三，BetterUp 作为科技赋能型代表入选。</div>
+      <a class="card-action" href="https://www.sohu.com/a/1012983550_122627947" target="_blank" rel="noopener noreferrer">阅读原文</a>
+    </div>
+
+    <div class="card">
+      <div class="card-num">7</div>
+      <div class="card-title">搜狐：2036 年教练行业 4 种惊人预测——AI、全球化与本土化博弈</div>
+      <div class="card-meta"><span class="source-chip">搜狐</span><span class="time-chip">4 月 22 日</span></div>
+      <div class="card-summary">基于 ICF 未来报告的深度延展，提出"数字优先人可选""全球共享体""数字鸿沟""本土人情温度"四种情景，呼吁行业主动拥抱变革而非被动等待。</div>
+      <a class="card-action" href="https://www.sohu.com/a/1013074389_120091393" target="_blank" rel="noopener noreferrer">阅读原文</a>
+    </div>
+
+    <div class="card">
+      <div class="card-num">8</div>
+      <div class="card-title">腾讯新闻：2026 专业情感咨询机构十佳排名发布</div>
+      <div class="card-meta"><span class="source-chip">腾讯新闻</span><span class="time-chip">6 月 5 日</span></div>
+      <div class="card-summary">行业评测榜单显示情感教练领域加速规范化——持证上岗成硬门槛、AI 数字化赋能、服务从短期挽回转向成长赋能、隐私建设成为核心竞争力。</div>
+      <a class="card-action" href="https://news.qq.com/rain/a/20260605A08W8900" target="_blank" rel="noopener noreferrer">阅读原文</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- S3 行业动态 -->
+<div class="section" id="s3">
+  <div class="section-header"><span class="section-icon">📊</span><span class="section-title">行业动态</span><div class="section-line"></div></div>
+  <div class="card-grid">
+
+    <div class="card">
+      <div class="card-num">9</div>
+      <div class="card-title">中国高管教练服务市场 2025 年达 48.7 亿元，同比增长 16.3%</div>
+      <div class="card-meta"><span class="source-chip">豆丁网</span><span class="time-chip">1 月 25 日</span></div>
+      <div class="card-summary">行业研究报告显示，中国高管教练服务市场快速增长，企业对领导力发展和组织效能提升的需求持续旺盛，预计未来三年复合增长率超过 15%。</div>
+      <a class="card-action" href="https://www.docin.com/p-4932518332.html" target="_blank" rel="noopener noreferrer">阅读原文</a>
+    </div>
+
+    <div class="card">
+      <div class="card-num">10</div>
+      <div class="card-title">亲密关系教练赛道升温：情感疗愈机构聚焦创伤修复</div>
+      <div class="card-meta"><span class="source-chip">搜狐</span><span class="time-chip">2 月 14 日</span></div>
+      <div class="card-summary">行业数据显示 32.7% 已婚人群存在情感创伤，ICF 认证教练入局情感领域，蕊姐-亲密关系教练等品牌获 95 分综合评分，AI 智能体服务模式开始涌现。</div>
+      <a class="card-action" href="https://www.sohu.com/a/987224264_122625922" target="_blank" rel="noopener noreferrer">阅读原文</a>
+    </div>
+
+    <div class="card">
+      <div class="card-num">11</div>
+      <div class="card-title">外企高管转型职业教练首选群智企业教练，PCC 通过率 92%-100%</div>
+      <div class="card-meta"><span class="source-chip">博客园</span><span class="time-chip">4 月 27 日</span></div>
+      <div class="card-summary">企业教练时薪 3000-8000 元，群智凭借 ICF 全级别授权、4 位 MCC 导师和 PCC 直通车服务，成为外企高管转型职业教练的首选机构。</div>
+      <a class="card-action" href="https://www.cnblogs.com/123456hhcm/p/19938502" target="_blank" rel="noopener noreferrer">阅读原文</a>
+    </div>
+
+    <div class="card">
+      <div class="card-num">12</div>
+      <div class="card-title">博世实践：组织教练如何打造高绩效团队</div>
+      <div class="card-meta"><span class="source-chip">搜狐</span><span class="time-chip">5 月 12 日</span></div>
+      <div class="card-summary">博世分享组织教练实践——"C+C=∞"理念、1-2 年长期陪伴模式、隐喻工作坊突破团队瓶颈，强调教练不与硬性绩效挂钩，AI 与人类教练协同分工。</div>
+      <a class="card-action" href="https://www.sohu.com/a/1021634651_121124319" target="_blank" rel="noopener noreferrer">阅读原文</a>
+    </div>
+
+    <div class="card">
+      <div class="card-num">13</div>
+      <div class="card-title">艾瑞 Q1 调研：76% 企业选择教练服务时面临三大痛点</div>
+      <div class="card-meta"><span class="source-chip">搜狐</span><span class="time-chip">4 月</span></div>
+      <div class="card-summary">艾瑞咨询调研显示，企业选教练服务的三大痛点为"方案与业务脱节""效果难量化""服务缺延续性"，文章提出从资质、方法论、行业适配度四维筛选。</div>
+      <a class="card-action" href="https://www.sohu.com/a/1004405477_121354901" target="_blank" rel="noopener noreferrer">阅读原文</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- S4 流派动态 -->
+<div class="section" id="s4">
+  <div class="section-header"><span class="section-icon">🏛</span><span class="section-title">主要流派动态</span><div class="section-line"></div></div>
+  <div class="card-grid">
+
+    <div class="card">
+      <div class="card-num">14</div>
+      <div class="card-title">ICF 设立"AI 总监"：释放教练行业拥抱 AI 的信号</div>
+      <div class="card-meta"><span class="source-chip">知乎</span><span class="time-chip">2 月 2 日</span></div>
+      <div class="card-summary">ICF 首次设立 AI 领导岗位，Coach8 深度解读认为这是行业正视 AI 不可逆转趋势的标志，鼓励教练探索 AI 边界，才能更深刻理解人类教练的不可替代性。</div>
+      <a class="card-action" href="https://zhuanlan.zhihu.com/p/2001664957889151818" target="_blank" rel="noopener noreferrer">阅读原文</a>
+    </div>
+
+    <div class="card">
+      <div class="card-num">15</div>
+      <div class="card-title">ICF 2026 认证体系全解析：从 ACC 到 MCC 的进阶之路</div>
+      <div class="card-meta"><span class="source-chip">CW Coach</span><span class="time-chip">3 月 4 日</span></div>
+      <div class="card-summary">详解 ICF 三级认证最新要求——Level 1/2/3 课程体系、ICE 笔试规则、MCS 导师教练专长认证新规，为教练从业者提供清晰的认证路径图。</div>
+      <a class="card-action" href="https://www.cw-coach.com/icf-certification-guide-acc-pcc-mcc/" target="_blank" rel="noopener noreferrer">阅读原文</a>
+    </div>
+
+    <div class="card">
+      <div class="card-num">16</div>
+      <div class="card-title">ICF 取消录音考核深度解读：从"终结性评价"到"形成性评价"</div>
+      <div class="card-meta"><span class="source-chip">Coach8</span><span class="time-chip">6 月</span></div>
+      <div class="card-summary">ICF 史诗级变革的核心逻辑：用高频反馈互动取代"一盘录音定终身"，行业将分化为执业教练、持牌导师（MCS）、持牌督导（CSS）三种"持牌人"。</div>
+      <a class="card-action" href="https://jl8.cn/site/article_detail/id/6541" target="_blank" rel="noopener noreferrer">阅读原文</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- S5 人物动态 -->
+<div class="section" id="s5">
+  <div class="section-header"><span class="section-icon">👤</span><span class="section-title">热点人物动态</span><div class="section-line"></div></div>
+  <div class="card-grid">
+
+    <div class="card">
+      <div class="card-num">17</div>
+      <div class="card-title">Adam Grant × Brené Brown × Kristen Bell 聚首 BetterUp Uplift 2026</div>
+      <div class="card-meta"><span class="source-chip">BetterUp</span><span class="time-chip">3 月 18 日</span></div>
+      <div class="card-summary">组织心理学家 Adam Grant 与演员 Kristen Bell 将展开"变革的勇气"对话；Brené Brown 作为 BetterUp 首席研究员，探讨 AI 时代人类领导力的核心价值。</div>
+      <a class="card-action" href="https://www.betterup.com/press/kristen-bell-adam-grant-bren%C3%A9-brown-pete-sohn-derrick-henry-and-nick-saban-to-headline-betterups-uplift-2026" target="_blank" rel="noopener noreferrer">阅读原文</a>
+    </div>
+
+    <div class="card">
+      <div class="card-num">18</div>
+      <div class="card-title">Vistage CEO 信心指数 Q1 2026：地缘不确定性下 CEO 谨慎乐观</div>
+      <div class="card-meta"><span class="source-chip">Vistage</span><span class="time-chip">4 月 14 日</span></div>
+      <div class="card-summary">Vistage 最新 CEO 信心指数显示，中小企业 CEO 信心在 Q1 微降，但整体仍处"谨慎乐观"区间。CEO 同侪教练被视为对抗不确定性的核心工具。</div>
+      <a class="card-action" href="https://vistage.com/press-center/press-release/ceo-confidence-trends-downward-in-q1-2026-as-geopolitical-uncertainty-returns/" target="_blank" rel="noopener noreferrer">阅读原文</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- S6 论文研究 -->
+<div class="section" id="s6">
+  <div class="section-header"><span class="section-icon">📄</span><span class="section-title">论文研究</span><div class="section-line"></div></div>
+  <div class="card-grid">
+
+    <div class="card">
+      <div class="card-num">19</div>
+      <div class="card-title">Coaching 期刊 2026 年卷：教练关系有效性系统综述</div>
+      <div class="card-meta"><span class="source-chip">SAGE Journals</span><span class="time-chip">2 月</span></div>
+      <div class="card-summary">SAGE 发表教练关系有效性系统综述，整合循证研究揭示教练关系的关键构成要素，为理解"什么让教练真正起效"提供学术框架。</div>
+      <a class="card-action" href="https://journals.sagepub.com/doi/10.24384/616q-8y27" target="_blank" rel="noopener noreferrer">阅读原文</a>
+    </div>
+
+    <div class="card">
+      <div class="card-num">20</div>
+      <div class="card-title">HRD 期刊：教练在人力资源开发中的角色——当前研究回顾与未来方向</div>
+      <div class="card-meta"><span class="source-chip">Taylor & Francis</span><span class="time-chip">2 月 27 日</span></div>
+      <div class="card-summary">回顾教练作为人才发展干预手段过去 20 年的实践与研究进展，指出行业仍被大量碎片化案例研究主导，呼吁更多系统性和纵向研究。</div>
+      <a class="card-action" href="https://www.tandfonline.com/doi/full/10.1080/13678868.2026.2638083" target="_blank" rel="noopener noreferrer">阅读原文</a>
+    </div>
+
+    <div class="card">
+      <div class="card-num">21</div>
+      <div class="card-title">Coaching: An International Journal 2026 年第 19 卷第 1 期出版</div>
+      <div class="card-meta"><span class="source-chip">Taylor & Francis</span><span class="time-chip">2026</span></div>
+      <div class="card-summary">教练领域旗舰期刊发布 2026 年新卷，涵盖教练理论、研究与实践的最新学术成果，反映行业学术化进程持续推进。</div>
+      <a class="card-action" href="https://www.tandfonline.com/toc/rcoa20/current" target="_blank" rel="noopener noreferrer">阅读原文</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- S7 公众舆情 -->
+<div class="section" id="s7">
+  <div class="section-header"><span class="section-icon">💬</span><span class="section-title">公众舆情</span><div class="section-line"></div></div>
+  <div class="card-grid">
+
+    <div class="card">
+      <div class="card-num">22</div>
+      <div class="card-title">小宇宙播客热议：AI 优先时代，教练会失业吗？</div>
+      <div class="card-meta"><span class="source-chip">小宇宙</span><span class="time-chip">2 月 27 日</span></div>
+      <div class="card-summary">《教练会谈室》播客深度解读 ICF 未来报告，讨论焦点：AI 不会淘汰教练，但会淘汰只做标准化对话的教练；未来属于能提供真实人际连接和深层协作的人。</div>
+      <a class="card-action" href="https://www.xiaoyuzhoufm.com/episode/69a1633166e2c303779f8ba9" target="_blank" rel="noopener noreferrer">阅读原文</a>
+    </div>
+
+    <div class="card">
+      <div class="card-num">23</div>
+      <div class="card-title">行业热议：ICF 取消录音考核后，中国教练是红利还是洗牌？</div>
+      <div class="card-meta"><span class="source-chip">Coach8</span><span class="time-chip">6 月</span></div>
+      <div class="card-summary">ICF 新规在中国教练社群引发两极讨论——利好派认为权杖交给本土高级导师，门槛转换意味着真正专业教练将迎更大机遇；担忧派则认为行业分化加速。</div>
+      <a class="card-action" href="https://jl8.cn/site/article_detail/id/6540" target="_blank" rel="noopener noreferrer">阅读原文</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <p>📊 本期共收录 <strong>23</strong> 条资讯 · 覆盖 <strong>7</strong> 大版块</p>
+  <p>📅 信息采集周期：2026 年 1 月 — 2026 年 6 月（上半年资讯汇总。自 W2624 期起严格按周范围采集）</p>
+  <p>🔢 编号规则：W + 年份后两位 + ISO 周数（例如 W2624 = 2026 年第 24 周）</p>
+  <p>📌 本报告为 2026 年上半年教练行业资讯汇总；每周行业周报请查看归档主页最新各期</p>
+  <p>📡 数据来源：ICF · Coach8 · BetterUp · Vistage · 搜狐 · 腾讯新闻 · 博客园 · SAGE · Taylor & Francis · PR Newswire 等</p>
+  <a class="back-home" href="index.html">← 返回归档主页</a>
+</div>
+
+<script>
+// Scroll animation
+const cards = document.querySelectorAll('.card');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 60);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.08 });
+cards.forEach(c => observer.observe(c));
+
+// Sticky nav shadow + active link
+const nav = document.getElementById('navBar');
+const navLinks = document.querySelectorAll('.nav-inner a');
+const sections = document.querySelectorAll('.section');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 10);
+  let current = '';
+  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 100) current = s.id; });
+  navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
+});
+</script>
+</body>
+</html>
