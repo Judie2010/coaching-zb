@@ -3,10 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>教练行业周报归档</title>
-<meta name="description" content="教练行业周报归档主页">
-<meta property="og:title" content="教练行业周报 W2626">
-<meta property="og:description" content="本周共收录 22 条资讯，覆盖 7 大版块。ICF 双轨认证开放与柏林峰会标志着教练行业专业化加速。">
+<title>教练行业周报 · 归档主页</title>
+<meta property="og:title" content="教练行业周报 W2627">
+<meta property="og:description" content="本周共收录 5 条资讯，覆盖 7 大版块。本周教练行业相对安静，但领导力衡量、企业教练式培训、督导反馈等议题仍有新动态。">
 <meta property="og:url" content="https://judie2010.github.io/coaching-zb/">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://judie2010.github.io/coaching-zb/og-image.jpg">
@@ -16,55 +15,205 @@
 <meta name="twitter:image" content="https://judie2010.github.io/coaching-zb/og-image.jpg">
 <style>
 :root {
-  --bg: #f8f9fa; --card-bg: #fff; --text: #1a1a2e; --text-secondary: #6c757d;
-  --accent: #2d6a4f; --accent-light: #d8f3dc; --border: #e9ecef;
-  --shadow: 0 1px 3px rgba(0,0,0,0.06); --radius: 12px;
-  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --bg: #f8f9fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #6c757d;
+  --accent: #2d6a4f;
+  --accent-light: #d8f3dc;
+  --border: #e9ecef;
+  --tag-bg: #f0f4f8;
+  --tag-text: #495057;
+  --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-hover: 0 4px 12px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04);
+  --radius: 12px;
+  --radius-sm: 8px;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
   --hero-gradient: linear-gradient(135deg, #1b4332 0%, #2d6a4f 40%, #40916c 100%);
 }
-*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-body { font-family: var(--font); background: var(--bg); color: var(--text); line-height:1.6; }
-.hero { background: var(--hero-gradient); color:#fff; padding:48px 24px 36px; text-align:center; }
-.hero h1 { font-size: clamp(26px,5vw,38px); font-weight:800; margin-bottom:8px; }
-.hero .subtitle { font-size:15px; opacity:.85; margin-bottom:16px; }
-.hero .latest { display:inline-block; background:rgba(255,255,255,0.18); border:1px solid rgba(255,255,255,0.22); padding:6px 20px; border-radius:20px; font-size:13px; margin-bottom:12px; }
-.hero .scope { font-size:13px; opacity:.65; margin-top:12px; }
-.container { max-width:720px; margin:0 auto; padding:32px 20px; }
-.container h2 { font-size:18px; color:var(--accent); margin-bottom:16px; }
-.archive-list { display:flex; flex-direction:column; gap:12px; }
-.archive-item { display:flex; align-items:center; gap:16px; background:var(--card-bg); padding:16px 20px; border-radius:var(--radius); border:1px solid var(--border); box-shadow:var(--shadow); text-decoration:none; color:var(--text); transition:box-shadow .2s, transform .15s; }
-.archive-item:hover { box-shadow:0 4px 12px rgba(0,0,0,0.08); transform:translateY(-1px); }
-.archive-week { min-width:56px; text-align:center; }
-.archive-week .wnum { font-size:28px; font-weight:800; color:var(--accent); line-height:1.1; }
-.archive-week .wlabel { font-size:10px; color:var(--text-secondary); display:block; }
-.archive-info { flex:1; }
-.archive-info h3 { font-size:15px; font-weight:600; margin-bottom:4px; }
-.archive-info .meta { font-size:13px; color:var(--text-secondary); }
-.archive-arrow { font-size:18px; color:var(--accent); font-weight:700; }
-.section-divider { padding:8px 0; text-align:center; }
-.section-divider span { font-size:12px; color:var(--text-secondary); background:var(--bg); padding:4px 12px; border-radius:10px; border:1px solid var(--border); }
-.footer { text-align:center; padding:32px 20px; font-size:13px; color:var(--text-secondary); }
-@media(max-width:640px) { .archive-item { gap:12px; padding:14px 16px; } }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.6; }
+.hero {
+  background: var(--hero-gradient);
+  padding: 48px 24px 36px;
+  text-align: center;
+  color: #fff;
+}
+.hero-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 6px 20px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+.hero h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: 3px;
+}
+.hero .subtitle {
+  font-size: 15px;
+  color: rgba(255,255,255,0.8);
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+}
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+.hero-stats .stat { text-align: center; }
+.hero-stats .stat-num { font-size: 28px; font-weight: 700; display: block; }
+.hero-stats .stat-label { font-size: 13px; color: rgba(255,255,255,0.7); }
+.main-content {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 36px 16px 48px;
+}
+.latest-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 24px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  margin-bottom: 32px;
+}
+.latest-label {
+  display: inline-block;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+.latest-card h2 {
+  font-size: 22px;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.latest-card .meta {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+.latest-card .summary {
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+.latest-card .cta {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 20px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+}
+.archive-list { display: flex; flex-direction: column; gap: 12px; }
+.archive-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  text-decoration: none;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+.archive-item:hover { border-color: var(--accent); box-shadow: var(--shadow-hover); }
+.archive-week {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 56px;
+}
+.archive-week .wnum {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+.archive-week .wlabel {
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+.archive-info { flex: 1; }
+.archive-info h3 {
+  font-size: 16px;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+.archive-info .meta {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+.archive-arrow {
+  font-size: 20px;
+  color: var(--text-secondary);
+}
+.footer {
+  background: var(--hero-gradient);
+  color: rgba(255,255,255,0.85);
+  padding: 36px 16px;
+  text-align: center;
+  margin-top: 48px;
+}
+.footer p { font-size: 14px; line-height: 1.8; margin-bottom: 6px; }
+.footer .footer-highlight { font-weight: 600; color: #fff; }
 </style>
 </head>
 <body>
+
 <div class="hero">
-  <div class="latest">最新一期：W2625（2026.06.15 – 06.21）</div>
+  <div class="hero-badge">W2627</div>
   <h1>教练行业周报</h1>
-  <div class="subtitle">Coaching Industry Weekly Briefing — 全球视野 · 专业洞察</div>
-  <div class="scope">聚焦高管教练 · 团队教练 · 情感教练 · 决策教练 · 理财教练 · 幸福教练 · 复盘教练等个人与组织成长突破领域</div>
+  <div class="subtitle">Coaching Industry Weekly Briefing — 归档主页</div>
+  <div class="hero-stats">
+    <div class="stat"><span class="stat-num">5</span><span class="stat-label">本期资讯</span></div>
+    <div class="stat"><span class="stat-num">7</span><span class="stat-label">大版块</span></div>
+  </div>
 </div>
-<div class="container">
-  <h2>📰 最新周报</h2>
+
+<div class="main-content">
+
+  <div class="latest-card">
+    <div class="latest-label">最新一期</div>
+    <h2>W2627 · 教练行业周报</h2>
+    <div class="meta">2026.06.29 – 07.05 · 5 条资讯 · 7 个版块</div>
+    <div class="summary">本周教练行业相对安静，但领导力衡量、企业教练式培训、督导反馈研究等议题仍有新动态。</div>
+    <a class="cta" href="w2627.html">阅读本期 →</a>
+  </div>
+
   <div class="archive-list">
-      <a href="w2626.html" class="archive-item">
-        <div class="archive-week"><span class="wnum">26</span><span class="wlabel">W2626</span></div>
-        <div class="archive-info">
-          <h3>W2626 · 教练行业周报</h3>
-          <div class="meta">2026.06.22 – 06.28 · 22 条资讯 · 7 个版块</div>
-        </div>
-        <div class="archive-arrow">→</div>
-      </a>
+    <a href="w2627.html" class="archive-item">
+      <div class="archive-week"><span class="wnum">27</span><span class="wlabel">W2627</span></div>
+      <div class="archive-info">
+        <h3>W2627 · 教练行业周报</h3>
+        <div class="meta">2026.06.29 – 07.05 · 5 条资讯 · 7 个版块</div>
+      </div>
+      <div class="archive-arrow">→</div>
+    </a>
+    <a href="w2626.html" class="archive-item">
+      <div class="archive-week"><span class="wnum">26</span><span class="wlabel">W2626</span></div>
+      <div class="archive-info">
+        <h3>W2626 · 教练行业周报</h3>
+        <div class="meta">2026.06.22 – 06.28 · 22 条资讯 · 7 个版块</div>
+      </div>
+      <div class="archive-arrow">→</div>
+    </a>
     <a href="w2625.html" class="archive-item">
       <div class="archive-week"><span class="wnum">25</span><span class="wlabel">W2625</span></div>
       <div class="archive-info">
@@ -77,28 +226,19 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); line
       <div class="archive-week"><span class="wnum">24</span><span class="wlabel">W2624</span></div>
       <div class="archive-info">
         <h3>W2624 · 教练行业周报</h3>
-        <div class="meta">2026.06.08 – 06.14 · 10 条资讯 · 7 个版块</div>
+        <div class="meta">2026.06.08 – 06.14 · 22 条资讯 · 7 个版块</div>
       </div>
       <div class="archive-arrow">→</div>
     </a>
   </div>
 
-  <div class="section-divider"><span>📊 特别报告</span></div>
+</div>
 
-  <div class="archive-list">
-    <a href="h1-2026.html" class="archive-item">
-      <div class="archive-week"><span class="wnum">H1</span><span class="wlabel">2026</span></div>
-      <div class="archive-info">
-        <h3>Y26上 · 教练行业半年报</h3>
-        <div class="meta">2026.01 – 2026.06 · 23 条资讯 · 7 个版块 · 上半年资讯汇总</div>
-      </div>
-      <div class="archive-arrow">→</div>
-    </a>
-  </div>
-</div>
-<div class="footer">
-  <p>教练行业周报 · 每周一自动更新</p>
-  <p>数据来源：ICF · Coach8 · BetterUp · Vistage · 搜狐 · 腾讯新闻 · SAGE · Taylor & Francis 等</p>
-</div>
+<footer class="footer">
+  <p>教练行业周报 · 每周日更新</p>
+  <p>编号规则：W + 年份后两位 + ISO 周数</p>
+  <p>数据来源：ICF、主流媒体、学术期刊、教练培训机构及公开资讯</p>
+</footer>
+
 </body>
 </html>
